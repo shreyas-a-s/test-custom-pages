@@ -21,7 +21,7 @@ jobs:
         env:
           MY_NAME: ${{ secrets.MY_NAME }}
         run: |
-          sed -i "s/MY_NAME/${{env.MY_NAME}}/g" index.html
+          sed -i "s/MY_NAME/${MY_NAME}/g" index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
