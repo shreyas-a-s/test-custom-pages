@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Adjust if you deploy from a different branch
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
