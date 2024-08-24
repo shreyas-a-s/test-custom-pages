@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Replace text in index.html
-        run: echo ${{ secrets.MY_NAME }} | sed 's/ //g' | sed -i 's/MY_NAME/$(cat)/g' index.html
+        run: sed -i 's/MY_NAME/This is my name/g' index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
