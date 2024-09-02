@@ -20,9 +20,7 @@ jobs:
       - name: Replace text in index.html
         env:
           MY_NAME: ${{ secrets.MY_NAME }}
-        run: |
-          chmod +x ./deploy.sh
-          ./deploy.sh
+        run: sed -i "s/MY_NAME/$MY_NAME/g" index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
