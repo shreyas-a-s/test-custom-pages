@@ -19,7 +19,7 @@ jobs:
 
       - name: Replace text in index.html
         env:
-          MY_NAME: ${{ vars.MY_NAME }}
+          MY_NAME: ${{ secrets.MY_NAME }}
         run: |
           chmod +x ./deploy.sh
           ./deploy.sh
